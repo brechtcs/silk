@@ -1,0 +1,21 @@
+title Silk .. The Smoothest Markup
+
+<header>
+	h1 Silk
+	The Smoothest Markup
+</header>
+
+<article>
+	h2 Motivation
+
+	I love static sites. I think static site generators are great idea. What I'm less enamored by is the roundabout workflow most of these generators force on you. First you write your posts in a weird ducktaped format with metadata on top (in most cases structured as YAML) and the rest of your content underneath (almost always written in Markdown). These posts are then parsed into a data structure which in turn is fed to some separate HTML layout files.
+
+	I'd much rather write in a format that can represent an entire HTML document in its own right, and then use a simple script transforming it into the real thing. That simple script is Silk, allowing you the produce the smoothest markup you've ever written.
+</article>
+
+<nav>
+	h2 Examples
+
+	* Basic
+	* HTML
+</nav>

@@ -1,0 +1,47 @@
+title Silk .. Basic Example
+
+meta[author] Brecht Savelkoul
+link[stylesheet] /style.css
+
+style[body] max-width: 62ch
+style[body] margin: 0 auto
+style[.stuff] color: red
+
+h1 Basic Example
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Maecenas faucibus euismod velit, ac dapibus quam aliquam eu.
+
+Sed in lectus venenatis, pulvinar diam sit amet, porttitor ex. Sed condimentum lectus id vulputate faucibus. Etiam tristique nunc est, sit amet faucibus lacus blandit maximus. Morbi tempus molestie condimentum. Nullam ullamcorper odio vel arcu ultricies, sed auctor velit convallis. Pellentesque quis felis enim. Maecenas congue mauris eu accumsan ullamcorper. Morbi quis mi mi. Donec neque sem, porttitor sit amet tempus non, volutpat ut mauris. Sed diam arcu, luctus eget congue ac, convallis a tellus. In ex arcu, pharetra sed sem ut, egestas posuere libero. Morbi fermentum dapibus enim in maximus.
+
+Etiam mollis neque quis dapibus consectetur. Nam facilisis magna est, quis luctus erat auctor eget. In commodo porttitor ligula, eget ornare nibh sollicitudin a. Donec porta, nulla a fermentum tristique, quam enim pulvinar ex, gravida feugiat lorem nulla feugiat orci. Phasellus bibendum nec lorem condimentum ultrices. Morbi at tempor massa. Sed nec euismod tellus, vitae eleifend lectus. Quisque tristique malesuada venenatis. Mauris sed elit aliquet, lobortis dui non, pretium nibh. Quisque at lectus risus. Vivamus sapien dolor, convallis ut dui sed, ultricies accumsan enim. Nullam eget nibh eu lacus lacinia auctor. Maecenas vel ligula ut ex interdum sodales. Duis nec elementum odio, ac suscipit neque.
+
+h2 Unordered list
+* first item
+** nested item
+** another nested one
+*** even deeper
+* last item
+
+h2 Ordered list
+# one
+## one point one
+## one point two
+# two
+# three
+
+h2 Mixed list #1
+# one
+** nested item
+### one nested one
+### one nested two
+** another nested one
+# two
+
+h2 Mixed list #2
+* item
+## item point one
+## item point two
+*** nested point
+## item point three
+* more
