@@ -9,6 +9,7 @@ function Meta.parse (line)
 		return nil, "not a link line"
 	end
 	return {
+		nodetype = "element";
 		name = "meta";
 		attr = string.format(" %s content=%q", attr:gsub(SPACE, ""), content);
 	}

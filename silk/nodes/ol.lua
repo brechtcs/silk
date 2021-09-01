@@ -8,10 +8,12 @@ function OrderedList.parse (line)
 		return nil, "not an ordered list line"
 	end
 	return {
+		nodetype = "element";
 		name = "ol";
 		level = #mark;
 		children = {
 			{
+				nodetype = "element";
 				name = "li";
 				children = { text };
 			}

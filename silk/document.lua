@@ -126,8 +126,11 @@ function Doc:append_body (node)
 			for _, child in ipairs(node.children) do
 				table.insert(prev.children, child)
 			end
-		else
+		elseif node.nodetype == "element" then
 			table.insert(prev.children, node)
+		else
+			table.insert(self.body.main, node)
+			prev.open = false
 		end
 	else
 		table.insert(self.body.main, node)

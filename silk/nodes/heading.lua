@@ -8,6 +8,7 @@ function Heading.parse (line)
 		return nil, "not a header line"
 	end
 	return {
+		nodetype = "element";
 		name = string.format('h%d', level);
 		children = { text };
 		attr = attr;

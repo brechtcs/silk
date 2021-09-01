@@ -8,10 +8,12 @@ function UnorderedList.parse (line)
 		return nil, "not an unordered list line"
 	end
 	return {
+		nodetype = "element";
 		name = "ul";
 		level = #mark;
 		children = {
 			{
+				nodetype = "element";
 				name = "li";
 				children = { text };
 			}

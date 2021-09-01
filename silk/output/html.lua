@@ -6,6 +6,8 @@ local SPACE = "%s+$"
 local function render_node (self)
 	if type(self) == "string" then
 		return self
+	elseif self.nodetype == "html" then
+		return self.content
 	end
 	self.attr = self.attr and self.attr:gsub(SPACE, "") or ""
 	if not self.children then
