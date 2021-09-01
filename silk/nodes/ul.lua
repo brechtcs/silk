@@ -9,12 +9,12 @@ function UnorderedList.parse (line)
 	end
 	return {
 		nodetype = "element";
-		name = "ul";
+		tag = "ul";
 		level = #mark;
 		children = {
 			{
 				nodetype = "element";
-				name = "li";
+				tag = "li";
 				children = { text };
 			}
 		};

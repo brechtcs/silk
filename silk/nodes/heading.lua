@@ -9,7 +9,7 @@ function Heading.parse (line)
 	end
 	return {
 		nodetype = "element";
-		name = string.format('h%d', level);
+		tag = string.format('h%d', level);
 		children = { text };
 		attr = attr;
 	}

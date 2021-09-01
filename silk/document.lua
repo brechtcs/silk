@@ -121,7 +121,7 @@ function Doc:append_body (node)
 			end
 		end
 		local level = node.level and node.level == depth
-		local flat = not node.level and prev.name == node.name
+		local flat = not node.level and prev.tag == node.tag
 		if level or flat then
 			for _, child in ipairs(node.children) do
 				table.insert(prev.children, child)

@@ -10,7 +10,7 @@ function Meta.parse (line)
 	end
 	return {
 		nodetype = "element";
-		name = "meta";
+		tag = "meta";
 		attr = string.format(" %s content=%q", attr:gsub(SPACE, ""), content);
 	}
 end

@@ -11,14 +11,14 @@ local function render_node (self)
 	end
 	self.attr = self.attr and self.attr:gsub(SPACE, "") or ""
 	if not self.children then
-		return EMPTY:format(self.name, self.attr)
+		return EMPTY:format(self.tag, self.attr)
 	end
 	local inner = ""
 	for _, child in ipairs(self.children) do
 		local br = #inner > 0 and self.sep or ""
 		inner = inner .. br .. render_node(child)
 	end
-	return CONTAINER:format(self.name, self.attr, inner, self.name)
+	return CONTAINER:format(self.tag, self.attr, inner, self.tag)
 end
 
 local function render_style (self)

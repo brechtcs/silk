@@ -7,7 +7,7 @@ function Paragraph.parse (line)
 
 	return {
 		nodetype = "element";
-		name = "p";
+		tag = "p";
 		children = { content };
 		sep = "<br>";
 		open = true;

@@ -9,7 +9,7 @@ function Link.parse (line)
 	end
 	return {
 		nodetype = "element";
-		name = "link";
+		tag = "link";
 		attr = string.format(" href=%q %s", href, attr);
 	}
 end

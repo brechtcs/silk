@@ -9,12 +9,12 @@ function OrderedList.parse (line)
 	end
 	return {
 		nodetype = "element";
-		name = "ol";
+		tag = "ol";
 		level = #mark;
 		children = {
 			{
 				nodetype = "element";
-				name = "li";
+				tag = "li";
 				children = { text };
 			}
 		};
