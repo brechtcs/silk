@@ -1,7 +1,6 @@
 local PATTERN = "^%<meta%s+([^%>]+)%>%s*(.*)$"
 local SPACE = "%s+$"
 
-local Node = require "silk.nodes.base"
 local Meta = {}
 
 function Meta.parse (line)
@@ -9,7 +8,7 @@ function Meta.parse (line)
 	if not ok then
 		return nil, "not a link line"
 	end
-	return Node:create {
+	return {
 		name = "meta";
 		attr = string.format(" %s content=%q", attr:gsub(SPACE, ""), content);
 	}

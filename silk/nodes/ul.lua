@@ -1,6 +1,5 @@
 local UL = "%s*(%*+)%s+(.*)$"
 
-local Node = require "silk.nodes.base"
 local UnorderedList = {}
 
 function UnorderedList.parse (line)
@@ -8,11 +7,11 @@ function UnorderedList.parse (line)
 	if not ok then
 		return nil, "not an unordered list line"
 	end
-	return Node:create {
+	return {
 		name = "ul";
 		level = #mark;
 		children = {
-			Node:create {
+			{
 				name = "li";
 				children = { text };
 			}

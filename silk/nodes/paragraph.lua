@@ -1,12 +1,11 @@
 local PATTERN = "^%s*(.+)$"
 
-local Node = require "silk.nodes.base"
 local Paragraph = {}
 
 function Paragraph.parse (line)
 	local _, _, content = line:find(PATTERN)
 
-	return Node:create {
+	return {
 		name = "p";
 		children = { content };
 		sep = "<br>";

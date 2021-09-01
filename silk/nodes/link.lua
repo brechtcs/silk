@@ -1,6 +1,5 @@
 local PATTERN = "^%<link%s+([^%>]+)%>%s*(.*)$"
 
-local Node = require "silk.nodes.base"
 local Link = {}
 
 function Link.parse (line)
@@ -8,7 +7,7 @@ function Link.parse (line)
 	if not ok then
 		return nil, "not a link line"
 	end
-	return Node:create {
+	return {
 		name = "link";
 		attr = string.format(" href=%q %s", href, attr);
 	}

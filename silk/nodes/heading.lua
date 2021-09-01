@@ -1,6 +1,5 @@
 local PATTERN = "^%s*%<h(%d)(.*)%>%s?(.*)$"
 
-local Node = require "silk.nodes.base"
 local Heading = {}
 
 function Heading.parse (line)
@@ -8,7 +7,7 @@ function Heading.parse (line)
 	if not ok then
 		return nil, "not a header line"
 	end
-	return Node:create {
+	return {
 		name = string.format('h%d', level);
 		children = { text };
 		attr = attr;

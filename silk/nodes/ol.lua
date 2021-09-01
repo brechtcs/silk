@@ -1,6 +1,5 @@
 local OL = "%s*(%#+)%s+(.*)$"
 
-local Node = require "silk.nodes.base"
 local OrderedList = {}
 
 function OrderedList.parse (line)
@@ -8,11 +7,11 @@ function OrderedList.parse (line)
 	if not ok then
 		return nil, "not an ordered list line"
 	end
-	return Node:create {
+	return {
 		name = "ol";
 		level = #mark;
 		children = {
-			Node:create {
+			{
 				name = "li";
 				children = { text };
 			}
