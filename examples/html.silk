@@ -1,14 +1,14 @@
-charset ISO-8859-1
-title Silk .. Tags Example
+<charset> ISO-8859-1
+<title> Silk .. Tags Example
 
 <header id="masthead" class="shiny">
-	h1 Silk
+	<h1> Silk
 
 	And some other masthead shit
 </header>
 
 <article> 
-	h2 Tags Example
+	<h2> Tags Example
 
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus euismod velit, ac dapibus quam aliquam eu. Sed in lectus venenatis, pulvinar diam sit amet, porttitor ex. Sed condimentum lectus id vulputate faucibus. Etiam tristique nunc est, sit amet faucibus lacus blandit maximus. Morbi tempus molestie condimentum. Nullam ullamcorper odio vel arcu ultricies, sed auctor velit convallis. Pellentesque quis felis enim. Maecenas congue mauris eu accumsan ullamcorper. Morbi quis mi mi. Donec neque sem, porttitor sit amet tempus non, volutpat ut mauris. Sed diam arcu, luctus eget congue ac, convallis a tellus. In ex arcu, pharetra sed sem ut, egestas posuere libero. Morbi fermentum dapibus enim in maximus.
 

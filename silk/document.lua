@@ -1,7 +1,7 @@
 local EMPTY = "^%s*$"
-local STYLE = "^style%[([^%]]+)%]%s+(.*)$"
-local CHARSET = "^charset%s+(.+)$"
-local TITLE = "^title%s+(.+)$"
+local STYLE = "^%<style%s+([^%>]+)%>%s*(.*)$"
+local CHARSET = "^%<charset%>%s*(.+)$"
+local TITLE = "^%<title%>%s?(.+)$"
 
 local Nodes = require "silk.nodes.all"
 local Doc = {}
