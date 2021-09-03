@@ -1,0 +1,33 @@
+<title> Silk .. List Examples
+
+<h1> List Examples
+
+<h2 class="chaos"> Unordered list
+* first item
+** nested item
+** another nested one
+*** even deeper
+* last item
+
+<h2 class="order"> Ordered list
+# one
+## one point one
+## one point two
+# two
+# three
+
+<h2> Mixed list #1
+# one
+** nested item
+### one nested one
+### one nested two
+** another nested one
+# two
+
+<h2> Mixed list #2
+* item
+## item point one
+## item point two
+*** nested point
+## item point three
+* more
