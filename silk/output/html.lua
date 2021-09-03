@@ -18,7 +18,11 @@ local function render_node (self)
 		local br = #inner > 0 and self.sep or ""
 		inner = inner .. br .. render_node(child)
 	end
-	return CONTAINER:format(self.tag, self.attr, inner, self.tag)
+	local outer = CONTAINER:format(self.tag, self.attr, inner, self.tag)
+	if self.outer then
+		outer = self.outer:format(outer)
+	end
+	return outer
 end
 
 local function render_style (self)

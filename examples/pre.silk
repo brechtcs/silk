@@ -1,0 +1,25 @@
+<title> Silk .. Preformatted Text
+
+<h1> Preformatted Text
+
+|> some
+|> preformatted
+|> stuff
+
+<section class="nested">
+	<h2> Nested
+
+	|> some
+	|> nested
+	|> pre
+	|> stuff
+</section>
+
+<section>
+	<h2> Code
+
+	$ class="code-lua"> -- echo.lua
+	$> function echo (msg)
+	$>   return msg
+	$> end
+</section>
