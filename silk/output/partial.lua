@@ -28,6 +28,9 @@ end
 
 function Partial:render (doc)
 	local partial = ""
+	for _, node in ipairs(doc.head) do
+		partial = partial .. self:render_node(node)
+	end
 	for _, node in ipairs(doc.body.main) do
 		partial = partial .. self:render_node(node)
 	end
