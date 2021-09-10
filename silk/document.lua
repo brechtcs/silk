@@ -1,6 +1,7 @@
 local EMPTY = "^%s*$"
 local STYLE = "^%<style%s+([^%>]+)%>%s*(.*)$"
 local CHARSET = "^%<charset%>%s*(.+)$"
+local VIEWPORT = "^%<viewport%>%s*(.+)$"
 local TITLE = "^%<title%>%s?(.+)$"
 
 local Nodes = require "silk.nodes.all"
@@ -10,6 +11,7 @@ function Doc:new (doc)
 	doc = doc or {}
 
 	doc.charset = doc.charset or "utf-8"
+	doc.viewport = doc.viewport or "width=device-width"
 	doc.title = doc.title or ""
 	doc.head = doc.head or {}
 	doc.head.style = doc.head.style or {}
@@ -63,8 +65,9 @@ function Doc:try_head (line)
 		end
 	end
 	return self:try_style(line)
-		or self:try_title(line)
 		or self:try_charset(line)
+		or self:try_viewport(line)
+		or self:try_title(line)
 end
 
 function Doc:try_style (line)
@@ -85,6 +88,15 @@ function Doc:try_charset (line)
 		return nil, "not a charset line"
 	end
 	self.charset = charset
+	return true
+end
+
+function Doc:try_viewport (line)
+	local ok, _, viewport = line:find(VIEWPORT)
+	if not ok then
+		return nil, "not a viewport line"
+	end
+	self.viewport = viewport
 	return true
 end
 

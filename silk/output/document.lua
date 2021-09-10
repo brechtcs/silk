@@ -23,6 +23,7 @@ end
 function Document:render_head (doc)
 	local head = "<head>"
 	head = head .. string.format("<meta charset=%q>", doc.charset)
+	head = head .. string.format("<meta name=%q content=%q>", "viewport", doc.viewport)
 	head = head .. string.format("<title>%s</title>", doc.title)
 	for _, node in ipairs(doc.head) do
 		head = head .. Partial:render_node(node)
