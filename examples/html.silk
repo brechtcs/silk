@@ -2,6 +2,9 @@
 <viewport> width=device-width, initial-scale=1
 <title> Silk .. Tags Example
 
+<script src="/some-script.js">
+<script type="module"> import('/some-shit.js').then(console.log)
+
 <header id="masthead" class="shiny">
 	<h1> Silk
 

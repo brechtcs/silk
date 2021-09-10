@@ -2,6 +2,7 @@ return {
 	Head = {
 		require "silk.nodes.link";
 		require "silk.nodes.meta";
+		require "silk.nodes.script";
 	};
 
 	Body = {
