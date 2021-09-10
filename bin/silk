@@ -5,13 +5,13 @@ package.path = arg[0]:match("(.-)[^\\/]+$") .. "../?.lua;" .. package.path
 local Doc = require "silk.document"
 local quarg = require "quarg"
 
-local format = table.remove(arg, 1)
-local ok, render = pcall(require, "silk.output." .. format)
+local target = table.remove(arg, 1)
+local ok, format = pcall(require, "silk.output." .. target)
 if not ok then
-	error("no such silk output format: " .. format)
+	error("no such silk output target: " .. target)
 end
 
 local opts = quarg:extract(arg)
 local input = arg[1] and io.open(arg[1]) or io.stdin
 local doc = Doc:new(opts):parse_file(input)
-io.stdout:write(render(doc))
+io.stdout:write(format:render(doc))
